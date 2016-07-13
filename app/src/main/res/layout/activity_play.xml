@@ -23,61 +23,18 @@
         android:layout_weight="7"
         android:padding="16dp">
 
+        <!-- Psuedo Dynamic Song List -->
         <TableLayout
             android:id="@+id/song_list_table"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:stretchColumns="1">
-
-<!--            <TableRow>
-
-                <TextView
-                    android:padding="3dip"
-                    android:text="@string/table_song_name"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:padding="3dip"
-                    android:text="@string/table_song_artist"
-                    android:textStyle="bold"
-                    android:paddingLeft="16dp"/>
-
-                <TextView
-                    android:padding="3dp"
-                    android:text="@string/table_song_play"
-                    android:gravity="end"
-                    android:textStyle="bold" />
-            </TableRow>-->
-
- <!--           <TableRow>
-
-                <TextView
-                    android:padding="3dip"
-                    android:text="Some Song Name" />
-
-                <TextView
-                    android:padding="3dip"
-                    android:text="Amazing Artist"
-                    android:paddingLeft="16dp"/>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:maxWidth="24dip"
-                    android:maxHeight="400dip"
-                    android:padding="3dp"
-                    android:src="@drawable/play"
-                    android:gravity="end" />
-
-            </TableRow>-->
-
+            android:stretchColumns="0,1">
 
         </TableLayout>
 
     </LinearLayout>
 
-    <!-- Bottom Menu Laout -->
+    <!-- Bottom Menu Layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -85,37 +42,10 @@
         android:gravity="center|bottom"
         android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/min_play"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="8dp"
-            android:src="@drawable/play" />
+        <include
+            android:id="@+id/id"
+            layout="@layout/common_menu" />
 
-        <ImageView
-            android:id="@+id/min_mix"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="8dp"
-            android:src="@drawable/mix" />
-
-        <ImageView
-            android:id="@+id/min_smash"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="8dp"
-            android:src="@drawable/smash" />
-
-        <ImageView
-            android:id="@+id/min_radio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="8dp"
-            android:src="@drawable/playing" />
     </LinearLayout>
 
 </LinearLayout>

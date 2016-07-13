@@ -1,51 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:layout_weight="9">
+        android:layout_weight="1"
+        android:gravity="center|top">
+
+        <TextView
+            android:id="@+id/intro_mix"
+            style="@style/IntroText"
+            android:text="@string/mix_intro" />
 
     </LinearLayout>
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="5">
+
+        <LinearLayout
+            android:id="@+id/user_interface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/user_interface_view"
+                style="@style/IntroText"
+                android:text="CHOOSE YOUR SONGS" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_interface_view"
+                android:text="Create user interface to select songs within the users library." />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/user_interface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/radio_station_view"
+                style="@style/IntroText"
+                android:layout_below="@+id/user_interface_view"
+                android:text="MIXED PLAYLIST" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Display Mix PlayList Ready and Play" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Bottom Menu Layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:layout_weight="1"
         android:gravity="center|bottom"
-        android:orientation="horizontal"
-        android:layout_weight="1" >
+        android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/min_play"
-            android:src="@drawable/play"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:padding="8dp" />
-        <ImageView
-            android:id="@+id/min_mix"
-            android:src="@drawable/mix"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="8dp" />
-        <ImageView
-            android:id="@+id/min_smash"
-            android:src="@drawable/smash"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="8dp" />
-        <ImageView
-            android:id="@+id/min_radio"
-            android:src="@drawable/playing"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="8dp" />
+        <include
+            android:id="@+id/id"
+            layout="@layout/common_menu" />
+
     </LinearLayout>
 
 </LinearLayout>

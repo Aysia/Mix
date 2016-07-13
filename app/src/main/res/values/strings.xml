@@ -5,7 +5,12 @@
     <string name="smash">Smash Mix</string>
     <string name="radio">Radio Mix</string>
     <string name="play_intro">Play Music from your Libaray</string>
+    <string name="mix_intro">Create a Mixed Playlist of music from user library based on user selections</string>
+    <string name="smash_intro">Play two or more songs at the same time</string>
+    <string name="radio_intro">Find radio stations based on user library song selections.</string>
     <string name="table_song_name">Song Title</string>
     <string name="table_song_artist">Artist</string>
     <string name="table_song_play">Play</string>
+    <string name="default_song">Some song title...</string>
+    <string name="default_artist">Some song artist...</string>
 </resources>

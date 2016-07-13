@@ -1,15 +1,9 @@
 package com.example.android.mix;
 
-
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
@@ -17,9 +11,6 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-/**
- * Created by Lani on 7/12/2016.
- */
 public class PlayActivity extends AppCompatActivity {
 
     @Override
@@ -30,6 +21,10 @@ public class PlayActivity extends AppCompatActivity {
         //Display List of Music Files on Users Device
         displayMusic();
 
+        //Display Bottom Menu
+        setBottomMenu();
+    }
+    public void setBottomMenu() {
         ImageView play = (ImageView) findViewById(R.id.min_play);
 
         // Set a click listener on that Layout
@@ -106,17 +101,17 @@ public class PlayActivity extends AppCompatActivity {
         TextView tv0 = new TextView(this);
         tv0.setText(R.string.table_song_name);
         tv0.setTypeface(null, Typeface.BOLD);
-        tv0.setPadding(3, 3, 3, 3);
+        tv0.setPadding(16, 16, 16, 16);
         tbrow0.addView(tv0);
         TextView tv1 = new TextView(this);
         tv1.setText(R.string.table_song_artist);
         tv1.setTypeface(null, Typeface.BOLD);
-        tv1.setPadding(16, 3, 3, 3);
+        tv1.setPadding(16, 16, 16, 16);
         tbrow0.addView(tv1);
         TextView tv2 = new TextView(this);
         tv2.setText(R.string.table_song_play);
         tv2.setTypeface(null, Typeface.BOLD);
-        tv0.setPadding(3, 3,3,3);
+        tv2.setPadding(16, 16, 16, 16);
         tv2.setGravity(Gravity.RIGHT);
         tbrow0.addView(tv2);
         myTable.addView(tbrow0);
@@ -124,14 +119,16 @@ public class PlayActivity extends AppCompatActivity {
         for (int i = 0; i < 10; i++) {
             TableRow tbrow = new TableRow(this);
             TextView t1v = new TextView(this);
-            t1v.setText("Some Song Title " + i);
+            t1v.setText(R.string.default_song);
+            t1v.setPadding(16, 16, 16, 16);
             tbrow.addView(t1v);
             TextView t2v = new TextView(this);
-            t2v.setText("Amazing Song Artis " + i);
+            t2v.setText(R.string.default_artist);
+            t2v.setPadding(16, 16, 16, 16);
             tbrow.addView(t2v);
             ImageView t3v = new ImageView(this);
             t3v.setImageResource(R.drawable.play_too);
-            t3v.setMaxHeight(24);
+            t3v.setMaxHeight(14);
             tbrow.addView(t3v);
             myTable.addView(tbrow);
         }
