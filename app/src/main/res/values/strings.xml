@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">Smash Mix</string>
-    <string name="play">Play</string>
+    <string name="play">Play Your Music</string>
     <string name="mix">Mix It Up</string>
     <string name="smash">Smash Mix</string>
     <string name="radio">Radio Mix</string>
+    <string name="play_intro">Play Music from your Libaray</string>
+    <string name="table_song_name">Song Title</string>
+    <string name="table_song_artist">Artist</string>
+    <string name="table_song_play">Play</string>
 </resources>
