@@ -130,7 +130,8 @@ public class PlayActivity extends AppCompatActivity {
             t2v.setText("Amazing Song Artis " + i);
             tbrow.addView(t2v);
             ImageView t3v = new ImageView(this);
-//            t3v.setImageResource(R.drawable.play_too);
+            t3v.setImageResource(R.drawable.play_too);
+            t3v.setMaxHeight(24);
             tbrow.addView(t3v);
             myTable.addView(tbrow);
         }
